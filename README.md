@@ -44,13 +44,13 @@ __How to start development environment__
 You should see the following containers
 
 - ozlotteries
-- vault
-- web
+- vault (credentials generator)
+- web (container for web project)
 - jl
 - db.jl
 - audit-log
 - attenborough
-- whalens
+- whalens (dynamic DNS system)
 
 3. If something goes wrong or you don't see some server is running. Shut them down and restart them.
 
