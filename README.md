@@ -16,7 +16,6 @@ __Routes__
 
 __Statistics Page Task__
 
-
 - UI Component
 
 StatisticsCards.js
@@ -26,11 +25,9 @@ StatisticsTip.js
 statisticsTip.css
 
 
-
 - Storybook UI
 
 StatisticsTip.story.js
-
 
 
 - Data Provider
@@ -40,7 +37,27 @@ test/dataProviders/statistics/tips.js/hotNumbers
 
 __How to start development environment__
 
-1. 
+1. `gijoe start cluster --lite` to launch all the containers for the dev environment
+
+2. `gijoe list` to check if all the containers are up and running
+
+You should see the following containers
+
+- ozlotteries
+- vault
+- web
+- jl
+- db.jl
+- audit-log
+- attenborough
+- whalens
+
+3. If something goes wrong or you don't see some server is running. Shut them down and restart them.
+
+`gijoe stop vault` to stop vault container
+
+`gijoe start vault` to start vault container
+
 
 __How Gerrit workflow works__
 
@@ -59,7 +76,6 @@ __How Gerrit workflow works__
 7. When all your sub-tasks related to the story are complete, you can merge your branch into `the_frontier`, which is a release candidate branch
 
 8. `the_frontier` branch will finally be merged into `master`
-
 
 __Questions in codebase__
 
