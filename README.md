@@ -13,6 +13,9 @@ __Routes__
 
 - web/src/app/routes.js
 
+__States__
+
+- web/app/redux
 
 __Statistics Page Task__
 
