@@ -38,6 +38,30 @@ StatisticsTip.story.js
 test/dataProviders/statistics/tips.js/hotNumbers
 
 
+__How to upload static images__
+
+For now, static images need to be uploaded to `JL` project.
+
+1. Get into `JL` docker by using `gijoe enter jl`
+
+2. Checkout `origin/the_frontier` branch
+
+3. Open `JL` project in your editor
+
+4. Place your files into `jl/web/media/images/pub/yourComponent`
+
+5. Commit your patch by running `git commit`
+
+The commit message should look as follows to meet the linter requirement:
+
+```
+yourBranchName descriptionOfYourPatch
+
+as above
+```
+
+6. Push your change to Gerrit by `git push origin HEAD:refs/for/the_frontier`
+
 __How to start development environment__
 
 1. `gijoe start cluster --lite` to launch all the containers for the dev environment
