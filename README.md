@@ -23,6 +23,12 @@ __Run Flow on your project__
 
 2. Use `./node_modules/.bin/flow` command to run Flow on your project
 
+__Flow doesn't pick up your latest code__
+
+1. Check the running process of flow by `ps aux | grep flow`
+
+2. Kill the Flow processes using `sudo pkill -9 flow` and `sudo pkill -9 flow-bin`
+
 __Build language files__
 
 Anytime you add new language using `react-intl`, you need to run `yarn build:langs` to generate the new translations.
