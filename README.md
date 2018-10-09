@@ -17,6 +17,10 @@ __States__
 
 - web/app/redux
 
+__Storybook doesn't refresh after changes__
+
+Use `sudo yarn storybook` to launch storybook.
+
 __Run Flow on your project__
 
 1. `gijoe enter web` to get into your web container
