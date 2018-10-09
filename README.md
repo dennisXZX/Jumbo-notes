@@ -17,12 +17,17 @@ __States__
 
 - web/app/redux
 
+__Run Flow on your project__
 
-__How to build language files__
+1. `gijoe enter web` to get into your web container
+
+2. Use `./node_modules/.bin/flow` command to run Flow on your project
+
+__Build language files__
 
 Anytime you add new language using `react-intl`, you need to run `yarn build:langs` to generate the new translations.
 
-__How to upload static images__
+__Upload static images__
 
 For now, static images need to be uploaded to `JL` project.
 
@@ -46,7 +51,7 @@ as above
 
 6. Push your change to Gerrit by `git push origin HEAD:refs/for/the_frontier`
 
-__How to start development environment__
+__Spin up your development environment__
 
 1. `gijoe start cluster --lite` to launch all the containers for the dev environment
 
@@ -69,6 +74,11 @@ You should see the following containers
 
 `gijoe start vault` to start vault container
 
+NOTE: if you restart `vault` you also need to restart `nginx` by `gijoe start nginx AU`.
+
+4. `gijoe enter web` to get into web container
+
+5. Run `yarn start:dev` to spin up your development environment
 
 __How Gerrit workflow works__
 
