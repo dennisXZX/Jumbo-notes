@@ -17,26 +17,10 @@ __States__
 
 - web/app/redux
 
-__Statistics Page Task__
 
-- UI Component
+__How to build language files__
 
-StatisticsCards.js
-
-StatisticsTip.js
-
-statisticsTip.css
-
-
-- Storybook UI
-
-StatisticsTip.story.js
-
-
-- Data Provider
-
-test/dataProviders/statistics/tips.js/hotNumbers
-
+Anytime you add new language using `react-intl`, you need to run `yarn build:langs` to generate the new translations.
 
 __How to upload static images__
 
