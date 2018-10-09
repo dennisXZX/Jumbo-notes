@@ -31,7 +31,7 @@ __Flow doesn't pick up your latest code__
 
 __Build language files__
 
-Anytime you add new language using `react-intl`, you need to run `yarn build:langs` to generate the new translations.
+Anytime you add new language using `react-intl`, you need to run `yarn build:langs` to generate new translation JSON file.
 
 __Upload static images__
 
