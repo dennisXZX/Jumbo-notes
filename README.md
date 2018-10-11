@@ -17,6 +17,16 @@ __States__
 
 - web/app/redux
 
+__Some endpoints doesn't work___
+
+1. Enter `JL` by `gijoe enter jl`
+
+2. Run `make` to update database
+
+3. Run `yarn build:config` to update the config file
+
+4. Restart nginx by `gijoe start nginx AU`
+
 __Storybook doesn't refresh after changes__
 
 Use `sudo yarn storybook` to launch storybook.
