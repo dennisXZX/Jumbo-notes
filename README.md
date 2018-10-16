@@ -17,6 +17,12 @@ __States__
 
 - web/app/redux
 
+__Add new route to Nginx__
+
+1. Enter `JL` by `gijoe enter jl`
+
+2. Add a new route in `src/resources/conf/nginx_v2/locations/server_locations_au_www.conf`
+
 __Some endpoints doesn't work___
 
 1. Enter `JL` by `gijoe enter jl`
