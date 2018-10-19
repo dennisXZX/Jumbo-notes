@@ -23,6 +23,12 @@ __Add new route to Nginx__
 
 2. Add a new route in `src/resources/conf/nginx_v2/locations/server_locations_au_www.conf`
 
+__Error: EACCES: permission denied__
+
+1. If you run into permission denied issue while `yarn build:langs`
+
+2. You can run `sudo chown -R $USER:$GROUP ./node_modules/` to solve the permission issue
+
 __Some endpoints doesn't work___
 
 1. Enter `JL` by `gijoe enter jl`
