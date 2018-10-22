@@ -17,6 +17,10 @@ __States__
 
 - web/app/redux
 
+__80 port has already been used__
+
+Run `pkill node` then restart the dev server by `yarn start:dev`
+
 __Add new route to Nginx__
 
 1. Enter `JL` by `gijoe enter jl`
