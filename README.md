@@ -17,6 +17,14 @@ __States__
 
 - web/app/redux
 
+__Verification steps__
+
+1. Checkout the latest `WEB` patch
+
+2. Checkout the latest `ozl` branch, and run `make` if there is any database, route or API changes
+
+3. Now your dev environment should be the latest both in the front and back ends
+
 __80 port has already been used__
 
 Run `pkill node` then restart the dev server by `yarn start:dev`
