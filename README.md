@@ -17,6 +17,12 @@ __States__
 
 - web/app/redux
 
+__Get back to a patch that you were previously working on__
+
+1. `git reflog` to see all the patches
+
+2. Checkout the patch that you want
+
 __Verification steps__
 
 1. Checkout the latest `WEB` patch
