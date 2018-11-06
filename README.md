@@ -17,6 +17,10 @@ __States__
 
 - web/app/redux
 
+__Use staging testing data__
+
+Modify `.env` file to include `DISCOVERY_BASE_URL=https://attenborough.frontier2.staging.ozl.jumdev.com`
+
 __Get back to a patch that you were previously working on__
 
 1. `git reflog` to see all the patches
