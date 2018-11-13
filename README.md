@@ -1,25 +1,22 @@
 ## Jumbo notes
 
-#### Codebase
-
-__Server entry point__
-
-- web/server/index.js
-
-- web/src/server/universial/main.js
-
-
-__Routes__
-
-- web/src/app/routes.js
-
-__States__
-
-- web/app/redux
-
 __Use staging testing data__
 
-Modify `.env` file to include `DISCOVERY_BASE_URL=https://attenborough.frontier2.staging.ozl.jumdev.com`
+In the web project, modify `.env` file to point discovery to staging URL `DISCOVERY_BASE_URL=https://attenborough.frontier2.staging.ozl.jumdev.com`
+
+__Merge master branch into feature branch__
+
+1. `git fetch` to update all the branches
+
+2. `git checkout featureBranch` to checkout to feature branch
+
+3. `git merge origin/master --no-ff` to merge master branch into feature branch, `--no-ff` ensures a merge message is always presented and no fast-forward would happen
+
+4. `git commit --amend` and write the message `Merge origin/master branch into featureBranch` 
+
+5. `git push origin HEAD:refs/for/featureBranch` to push the feature branch onto Gerrit
+
+6. Once the merging patch completed CI build, click `rebase` in your patch
 
 __Get back to a patch that you were previously working on__
 
