@@ -1,5 +1,23 @@
 ## Jumbo notes
 
+__Permissions problem on config/logs__
+
+1. Connect to the Node using `ssh jumbo@ci-node-016 -i ~/gijoe/codebases/ansible-jumbo/files/jumbo/ssh/id_rsa`. Change the node number in the command. Also, change the permission for id_rsa to `400` if it complains about permission is too open.
+
+1. First check that `config` directory has root:root as the permissions.
+
+```
+sudo ls -l /home/jenkins/swarm/workspace/web.pipeline/web
+```
+
+If it does:
+
+```
+sudo rm -rf /home/jenkins/swarm/workspace/web.pipeline/web
+```
+
+Basically we are removing the web folder at together. Friendly reminder: `rm -rf` command is irreversible, so just be a little be careful here. =P
+
 __Use staging testing data__
 
 In the web project, modify `.env` file to point discovery to staging URL `DISCOVERY_BASE_URL=https://attenborough.frontier2.staging.ozl.jumdev.com`
