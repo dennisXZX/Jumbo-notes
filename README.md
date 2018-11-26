@@ -30,7 +30,7 @@ __Merge master branch into feature branch__
 
 3. `git merge origin/master --no-ff` to merge master branch into feature branch, `--no-ff` ensures a merge message is always presented and no fast-forward would happen
 
-4. `git commit --amend` and write the message `Merge origin/master branch into featureBranch` 
+4. `git commit` and write the message `Merge origin/master branch into featureBranch` 
 
 5. `git push origin HEAD:refs/for/featureBranch` to push the feature branch onto Gerrit
 
