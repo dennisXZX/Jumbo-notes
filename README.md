@@ -34,7 +34,9 @@ __Merge master branch into feature branch__
 
 5. `git push origin HEAD:refs/for/featureBranch` to push the feature branch onto Gerrit
 
-6. Once the merging patch completed CI build, click `rebase` in your patch
+6. Once the merged patch completed CI build, ask people with permission to merge to merge the patch into the feature branch
+
+7. Once the patch is successfully merged into the branch, click `rebase` in your patches to get the latest update
 
 __Get back to a patch that you were previously working on__
 
