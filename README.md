@@ -1,5 +1,13 @@
 ## Jumbo notes
 
+__Start the new dev environment__
+
+1. `gijoe start webd`
+
+2. `docker ps` to see a list of running containers
+
+2. `docker logs web_webd_1 -f` to see all the logs of a particular container
+
 __Permissions problem on config/logs__
 
 1. Connect to the Node using `ssh jumbo@ci-node-016 -i ~/gijoe/codebases/ansible-jumbo/files/jumbo/ssh/id_rsa`. Change the node number in the command. Also, change the permission for id_rsa to `400` if it complains about permission is too open.
