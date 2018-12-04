@@ -1,5 +1,19 @@
 ## Jumbo notes
 
+__Compile SCSS to CSS__
+
+Everytime you make change to a SCSS file, you would need to compile it into CSS one.
+
+1. `npm install -g node-sass`
+
+2. cd `gijoe/codebases/web/scss` 
+
+3. run `yarn install`
+
+4. cd `gijoe/codebases/web`
+
+5. `node-sass scss/main.scss --output public/css --output-style compressed`
+
 __Start the new dev environment__
 
 1. `gijoe start webd`
