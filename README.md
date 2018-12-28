@@ -38,17 +38,17 @@ If it does:
 sudo rm -rf /home/jenkins/swarm/workspace/web.pipeline/web
 ```
 
-Basically we are removing the web folder at together. Friendly reminder: `rm -rf` command is irreversible, so just be a little be careful here. =P
+Basically we are removing the web folder all together. Friendly reminder: `rm -rf` command is irreversible, so just be a little bit careful here. =P
 
 __Use staging testing data__
 
-In the web project, modify `.env` file to point discovery to staging URL `DISCOVERY_BASE_URL=https://attenborough.frontier2.staging.ozl.jumdev.com`
+In the web project, modify `.env` file to point discovery base URL to staging `DISCOVERY_BASE_URL=https://attenborough.frontier2.staging.ozl.jumdev.com`
 
 __Merge master branch into feature branch__
 
 1. `git fetch` to update all the branches
 
-2. `git checkout featureBranch` to checkout to feature branch
+2. `git checkout featureBranch` to checkout feature branch
 
 3. `git merge origin/master --no-ff` to merge master branch into feature branch, `--no-ff` ensures a merge message is always presented and no fast-forward would happen
 
@@ -56,7 +56,7 @@ __Merge master branch into feature branch__
 
 5. `git push origin HEAD:refs/for/featureBranch` to push the feature branch onto Gerrit
 
-6. Once the merged patch completed CI build, ask people with permission to merge to merge the patch into the feature branch
+6. Once the merged patch completed CI build, ask people with permission to merge the patch into the feature branch
 
 7. Once the patch is successfully merged into the branch, click `rebase` in your patches to get the latest update
 
@@ -66,7 +66,7 @@ __Get back to a patch that you were previously working on__
 
 2. Checkout the patch that you want
 
-__Verification steps__
+__Update the front end and backend to the latest__
 
 1. Checkout the latest `WEB` patch
 
@@ -126,11 +126,11 @@ For now, static images need to be uploaded to `JL` project.
 
 1. Get into `JL` docker by using `gijoe enter jl`
 
-2. Checkout `origin/the_frontier` branch
+2. Checkout `origin/master` branch
 
 3. Open `JL` project in your editor
 
-4. Place your files into `jl/web/media/images/pub/yourComponent`
+4. Place your image files into `jl/web/media/images/pub/yourComponent`
 
 5. Commit your patch by running `git commit`
 
@@ -142,11 +142,11 @@ yourBranchName descriptionOfYourPatch
 as above
 ```
 
-6. Push your change to Gerrit by `git push origin HEAD:refs/for/the_frontier`
+6. Push your change to Gerrit by `git push origin HEAD:refs/for/master`
 
 __Spin up your development environment__
 
-1. `gijoe start cluster --lite` to launch all the containers for the dev environment
+1. `gijoe start cluster --lite`(old way) or `gijoe start webd` (new way) to launch all the containers for the dev environment.
 
 2. `gijoe list` to check if all the containers are up and running
 
@@ -167,7 +167,7 @@ You should see the following containers
 
 `gijoe start vault` to start vault container
 
-NOTE: if you restart `vault` you also need to restart `nginx` by `gijoe start nginx AU`.
+NOTE: if you restart `vault` you also need to also restart `nginx` by `gijoe start nginx AU`.
 
 4. `gijoe enter web` to get into web container
 
@@ -190,7 +190,3 @@ __How Gerrit workflow works__
 7. When all your sub-tasks related to the story are complete, you can merge your branch into `the_frontier`, which is a release candidate branch
 
 8. `the_frontier` branch will finally be merged into `master`
-
-__Questions in codebase__
-
-BaseGameOffer.js – how react-motion works
