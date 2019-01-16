@@ -1,5 +1,15 @@
 ## Jumbo notes
 
+__Deploy to AU devops__
+
+1. Login to `AU devops` by `ssh au-devops`
+
+2. Get into `ansible-jumbo` folder
+
+3. Use `cat scripts/production/README.md` to read the instructions
+
+4. Press `ctrl + d` twice to exit the server
+
 __Compile SCSS to CSS__
 
 Everytime you make change to a SCSS file, you would need to compile it into CSS one.
