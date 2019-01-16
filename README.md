@@ -1,14 +1,22 @@
 ## Jumbo notes
 
-__Deploy to AU devops__
+__Deployment guide__
 
-1. Login to `AU devops` by `ssh au-devops`
+- Notify in Release and Marketing channels about the release
 
-2. Get into `ansible-jumbo` folder
+[Deploy to Betfairy]
 
-3. Use `cat scripts/production/README.md` to read the instructions
+- Go to Jenkins -> Cluster -> cluster.deploy.jl -> Build with Parameters
+- In the JL_PIPELINE_BUILD_NUMBER field, put in the JL pipeline number
+- in the WEBUI_PIPELINE_BUILD_NUMBER, put in the WebUI pipeline number
 
-4. Press `ctrl + d` twice to exit the server
+[Deploy to au-devops]
+
+- Run `git fetch` and `git checkout origin/master` to make sure you have the latest updates
+- Run `git tag -l` to see the latest tag
+- Run `git tag <RELEASE_NO>` to tag a release
+- Run `git push origin <RELEASE_NO>` to push the tagged branch
+- Following the __Deploying WEBUI__ guideline on Jira (JD-1518)
 
 __Compile SCSS to CSS__
 
