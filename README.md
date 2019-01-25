@@ -1,5 +1,14 @@
 ## Jumbo notes
 
+__Run Behat tests locally__
+
+- `gijoe start web`
+- `gijoe start nginx AU`
+- `gijoe start selenium`
+- Run Behat tests using tags `SELENIUM_HOST=selenium.dennisx.dev.lan SELENIUM_BROWSER=chrome vendor/bin/behat --config=testing/behat/behat.yml --tags="@JL-17456"`
+- Run behat tests for a feature `SELENIUM_HOST=selenium.dennisx.dev.lan SELENIUM_BROWSER=chrome vendor/bin/behat --config=testing/behat/behat.yml testing/behat/features/controller/pub/AccountFundsDeposit/CreditCard.feature`
+- Launch `Remmina` to view the test running visually
+
 __Deployment guide__
 
 - Notify in Release and Marketing channels about the release
